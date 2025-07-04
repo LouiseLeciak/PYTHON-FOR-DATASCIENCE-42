@@ -1,14 +1,17 @@
 import sys
 
+
 def count_uppercase(s: str) -> int:
+
     """
     Counts the number of upper-case characteres
     """
     res = 0
     for i in s:
-        if(i.isupper()):
+        if (i.isupper()):
             res += 1
     return (res)
+
 
 def count_lowercase(s: str) -> int:
     """
@@ -16,9 +19,10 @@ def count_lowercase(s: str) -> int:
     """
     res = 0
     for i in s:
-        if(i.islower()):
+        if (i.islower()):
             res += 1
     return (res)
+
 
 def count_punctuation(s: str) -> int:
     """
@@ -31,6 +35,7 @@ def count_punctuation(s: str) -> int:
             res += 1
     return (res)
 
+
 def count_space(s: str) -> int:
     """
     Count the number of space
@@ -40,6 +45,7 @@ def count_space(s: str) -> int:
         if (i == ' '):
             res += 1
     return res
+
 
 def count_digit(s: str) -> int:
     """
@@ -51,19 +57,20 @@ def count_digit(s: str) -> int:
             res += 1
     return res
 
+
 def main():
     """
     Main block to print the informations on the inpt
     """
     if (len(sys.argv) > 2):
         print("AssertionError: more than one argument is provided")
-        return(1)
+        return (1)
     elif (len(sys.argv) < 2):
         print("What is the text to count?")
         inpt = input()
     else:
-        inpt = sys.argv[1]   
-   
+        inpt = sys.argv[1]
+
     result = len(inpt)
     print(f"The text contains {result} characters:")
 
@@ -81,7 +88,6 @@ def main():
 
     result = count_digit(inpt)
     print(f"{result} digits")
-
 
 
 if __name__ == "__main__":
