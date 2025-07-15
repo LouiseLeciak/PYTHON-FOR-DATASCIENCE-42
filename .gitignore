@@ -1,1 +1,3 @@
-.venv
+Python0/.venv
+Python0/ex08/
+*/__pycache__
