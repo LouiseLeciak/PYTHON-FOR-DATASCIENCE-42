@@ -1,19 +1,19 @@
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+def give_bmi(height: list[int | float], weight: list[int | float]) \
+        -> list[int | float]:
     """
     Take the weight and the height and return the bmi value
     """
     if (len(height) != len(weight)):
         raise ValueError("AssertionError: different size of lists")
-    
+
     for h, w in zip(height, weight):
         if not isinstance(h, (int, float)) or not isinstance(w, (int, float)):
             raise TypeError("AssertionError: should be int or float")
-        
+
     result = []
     for h, w in zip(height, weight):
         result.append(w / (h*h))
     return result
-
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
@@ -29,4 +29,3 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
         else:
             result.append(False)
     return result
-        
